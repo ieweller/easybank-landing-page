@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+$color-primary: hsl(136, 65%, 51%);
+$color-secondary: hsl(192, 70%, 51%);
+$color-background: hsl(233, 26%, 24%);
+$color-neutral: hsl(0, 0%, 100%);
+$color-neutral-gray: hsl(0, 0%, 98%);
+$color-neutral-dark: hsl(233, 8%, 62%);
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img.logo {
+    height: 1rem;
+  }
+  nav {
+    display: none;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  a.header-cta {
+    display: none;
+  }
+  img.menu{}
+}
