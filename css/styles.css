@@ -11,8 +11,10 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
-  header img.logo {
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white; }
+  header img {
     height: 1rem; }
   header nav {
     display: none; }
@@ -24,3 +26,5 @@ header {
       width: 100%; }
   header a.header-cta {
     display: none; }
+  header img.menu {
+    height: 0.7rem; }

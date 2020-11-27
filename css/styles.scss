@@ -23,7 +23,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  img.logo {
+  padding: 1rem;
+
+  background-color: $color-neutral;
+
+  img {
     height: 1rem;
   }
   nav {
@@ -39,5 +43,7 @@ header {
   a.header-cta {
     display: none;
   }
-  img.menu{}
+  img.menu{
+    height: 0.7rem;
+  }
 }
