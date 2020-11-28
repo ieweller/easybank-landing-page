@@ -69,13 +69,23 @@ header {
     @media (max-width: 760px) {
       header a.header-cta {
         display: none; } }
-  header img.menu {
+  header .menu {
     display: none;
-    height: 0.7rem; }
+    height: 0.7rem;
+    width: 1.4rem;
+    background: url(../img/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto; }
+    header .menu.close {
+      background: url(../img/icon-close.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: auto; }
     @media (max-width: 760px) {
-      header img.menu {
+      header .menu {
         display: inherit; }
-        header img.menu:hover {
+        header .menu:hover {
           cursor: pointer; } }
 
 .overlay {
