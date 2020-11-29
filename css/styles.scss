@@ -34,9 +34,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    height: 4rem;
     margin: 0 auto;
     max-width: 960px;
+    padding: 0 1.25rem;
   }
 
   a.logo-img {
@@ -59,6 +60,7 @@ header {
   }
 
   nav {
+    height: 100%;
 
     ul {
       text-align: center;
@@ -71,7 +73,33 @@ header {
       width: 100%;
 
       li {
+        display: flex;
+        align-items: center;
+        height: 100%;
         margin: 0 0.5rem;
+        position: relative;
+
+        transition: opacity 200ms ease;
+
+        &::after {
+          content:"";
+          height: 0.15rem;
+          width: 100%;
+          bottom: 0;
+          position: absolute;background: linear-gradient(90deg, $color-primary 0%, $color-secondary 100%);
+          opacity: 0;
+
+          transition: opacity 400ms ease;
+        }
+
+        &:hover {
+          cursor: pointer;
+          a {color: $color-background;}
+
+          &::after {
+            opacity: 1.0;
+          }
+        }
       }
     }
 
@@ -106,6 +134,12 @@ header {
 
     padding: 0.5rem 1rem;
 
+    transition: all 200ms ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
     @media (max-width: $mobile-breakpoint) {
       display: none;
     }
@@ -115,6 +149,7 @@ header {
     display: none;
     height: 0.7rem;
     width: 1.4rem;
+    overflow: hidden;
 
     background: url(../img/icon-hamburger.svg);
     background-repeat: no-repeat;
@@ -154,7 +189,8 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: calc( 100vh - 3rem);
+  height: 100vh;
+  padding: 1rem;
 
   // background: url(../img/bg-intro-desktop.svg);
   background-repeat: no-repeat;
@@ -166,7 +202,10 @@ header {
   text-align: center;
 
   @media (max-width: $mobile-breakpoint) {
-    // background: url(../img/image-mockups.png), url(../img/bg-intro-mobile.svg);
+    background: url(../img/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
   }
 
   h1 {

@@ -19,9 +19,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    height: 4rem;
     margin: 0 auto;
-    max-width: 960px; }
+    max-width: 960px;
+    padding: 0 1.25rem; }
   header a.logo-img {
     line-height: 0; }
   header a {
@@ -34,38 +35,63 @@ header {
         font-size: 1.1rem; } }
   header img {
     height: 1rem; }
-  header nav ul {
-    text-align: center;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%; }
-    header nav ul li {
-      margin: 0 0.5rem; }
-  @media (max-width: 760px) {
-    header nav {
-      display: none; }
-      header nav ul {
-        background-color: white;
-        border-radius: 0.5rem;
-        flex-direction: column;
-        margin-left: 1rem;
-        position: absolute;
-        top: 4.5rem;
-        left: 0;
-        padding: 1rem 0;
-        height: auto;
-        width: calc(100vw - 2rem);
-        z-index: 99; }
-        header nav ul li {
-          margin: 0.5rem auto; } }
+  header nav {
+    height: 100%; }
+    header nav ul {
+      text-align: center;
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%; }
+      header nav ul li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: 0 0.5rem;
+        position: relative;
+        transition: opacity 200ms ease; }
+        header nav ul li::after {
+          content: "";
+          height: 0.15rem;
+          width: 100%;
+          bottom: 0;
+          position: absolute;
+          background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+          opacity: 0;
+          transition: opacity 400ms ease; }
+        header nav ul li:hover {
+          cursor: pointer; }
+          header nav ul li:hover a {
+            color: #2d314d; }
+          header nav ul li:hover::after {
+            opacity: 1.0; }
+    @media (max-width: 760px) {
+      header nav {
+        display: none; }
+        header nav ul {
+          background-color: white;
+          border-radius: 0.5rem;
+          flex-direction: column;
+          margin-left: 1rem;
+          position: absolute;
+          top: 4.5rem;
+          left: 0;
+          padding: 1rem 0;
+          height: auto;
+          width: calc(100vw - 2rem);
+          z-index: 99; }
+          header nav ul li {
+            margin: 0.5rem auto; } }
   header a.header-cta {
     background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
     border-radius: 99rem;
     color: white;
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 1rem;
+    transition: all 200ms ease; }
+    header a.header-cta:hover {
+      opacity: 0.75; }
     @media (max-width: 760px) {
       header a.header-cta {
         display: none; } }
@@ -73,6 +99,7 @@ header {
     display: none;
     height: 0.7rem;
     width: 1.4rem;
+    overflow: hidden;
     background: url(../img/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -101,13 +128,20 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: calc( 100vh - 3rem);
+  height: 100vh;
+  padding: 1rem;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   background-color: white;
   color: #2d314d;
   text-align: center; }
+  @media (max-width: 760px) {
+    .hero {
+      background: url(../img/bg-intro-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100%; } }
   .hero h1 {
     font-weight: 400;
     font-size: 2.5rem; }

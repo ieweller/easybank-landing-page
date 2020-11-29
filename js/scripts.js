@@ -1,5 +1,5 @@
 $(".menu").click(function(){
-  $("nav").fadeToggle(200);
-  $(".overlay").fadeToggle(600);
+  $("nav").fadeToggle(50);
+  $(".overlay").fadeToggle(200);
   $(".menu").toggleClass('close');
 });
