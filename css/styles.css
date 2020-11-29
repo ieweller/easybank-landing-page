@@ -61,12 +61,13 @@ header {
           background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
           opacity: 0;
           transition: opacity 400ms ease; }
-        header nav ul li:hover {
-          cursor: pointer; }
-          header nav ul li:hover a {
-            color: #2d314d; }
-          header nav ul li:hover::after {
-            opacity: 1.0; }
+        @media (hover: hover) {
+          header nav ul li:hover {
+            cursor: pointer; }
+            header nav ul li:hover a {
+              color: #2d314d; }
+            header nav ul li:hover::after {
+              opacity: 1.0; } }
     @media (max-width: 760px) {
       header nav {
         display: none; }
@@ -83,18 +84,23 @@ header {
           width: calc(100vw - 2rem);
           z-index: 99; }
           header nav ul li {
-            margin: 0.5rem auto; } }
+            margin: 0.5rem auto; }
+            header nav ul li:hover::after {
+              opacity: 0; } }
   header a.header-cta {
     background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
     border-radius: 99rem;
     color: white;
     padding: 0.5rem 1rem;
     transition: all 200ms ease; }
-    header a.header-cta:hover {
-      opacity: 0.75; }
+    @media (hover: hover) {
+      header a.header-cta:hover {
+        opacity: 0.75; } }
     @media (max-width: 760px) {
       header a.header-cta {
-        display: none; } }
+        display: none; }
+        header a.header-cta:hover {
+          opacity: 1.0; } }
   header .menu {
     display: none;
     height: 0.7rem;
@@ -111,9 +117,7 @@ header {
       background-size: auto; }
     @media (max-width: 760px) {
       header .menu {
-        display: inherit; }
-        header .menu:hover {
-          cursor: pointer; } }
+        display: inherit; } }
 
 .overlay {
   background: linear-gradient(180deg, #2d314d 0%, rgba(0, 0, 0, 0) 100%);

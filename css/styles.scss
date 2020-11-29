@@ -92,12 +92,16 @@ header {
           transition: opacity 400ms ease;
         }
 
-        &:hover {
-          cursor: pointer;
-          a {color: $color-background;}
+        @media (hover:hover) {
+          &:hover {
+            cursor: pointer;
+            a {
+              color: $color-background;
+            }
 
-          &::after {
-            opacity: 1.0;
+            &::after {
+              opacity: 1.0;
+            }
           }
         }
       }
@@ -122,6 +126,10 @@ header {
 
         li {
           margin: 0.5rem auto;
+          
+          &:hover {
+            &::after {opacity: 0;}
+            }
         }
       }
     }
@@ -136,12 +144,18 @@ header {
 
     transition: all 200ms ease;
 
-    &:hover {
-      opacity: 0.75;
+    @media (hover:hover) {
+      &:hover {
+        opacity: 0.75;
+      }
     }
 
     @media (max-width: $mobile-breakpoint) {
       display: none;
+
+      &:hover {
+        opacity: 1.0;
+      }
     }
   }
 
@@ -165,9 +179,6 @@ header {
 
     @media (max-width: $mobile-breakpoint) {
       display: inherit;
-      &:hover {
-        cursor: pointer;
-      }
     }
   }
 }
