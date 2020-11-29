@@ -75,13 +75,12 @@ header {
           background-color: white;
           border-radius: 0.5rem;
           flex-direction: column;
-          margin-left: 1rem;
           position: absolute;
-          top: 4.5rem;
-          left: 0;
+          top: 5.5rem;
+          left: 1.5rem;
           padding: 1rem 0;
           height: auto;
-          width: calc(100vw - 2rem);
+          width: calc(100vw - 3rem);
           z-index: 99; }
           header nav ul li {
             margin: 0.5rem auto; }
