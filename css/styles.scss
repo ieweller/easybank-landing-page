@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;700&display=swap');
 
 $color-primary: hsl(136, 65%, 51%);
 $color-secondary: hsl(192, 70%, 51%);
@@ -199,7 +199,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 100vh;
+  height: calc(100vh - 2rem);
   padding: 1rem;
 
   // background: url(../img/bg-intro-desktop.svg);

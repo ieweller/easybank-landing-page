@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;700&display=swap");
 * {
   box-sizing: border-box; }
 
@@ -16,9 +16,12 @@ header {
   z-index: 99;
   background-color: white; }
   header .wrapper {
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
     height: 4rem;
     margin: 0 auto;
     max-width: 960px;
@@ -39,6 +42,7 @@ header {
     height: 100%; }
     header nav ul {
       text-align: center;
+      display: -webkit-box;
       display: flex;
       list-style: none;
       margin: 0;
@@ -46,11 +50,14 @@ header {
       height: 100%;
       width: 100%; }
       header nav ul li {
+        display: -webkit-box;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+                align-items: center;
         height: 100%;
         margin: 0 0.5rem;
         position: relative;
+        -webkit-transition: opacity 200ms ease;
         transition: opacity 200ms ease; }
         header nav ul li::after {
           content: "";
@@ -58,8 +65,10 @@ header {
           width: 100%;
           bottom: 0;
           position: absolute;
+          background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
           background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
           opacity: 0;
+          -webkit-transition: opacity 400ms ease;
           transition: opacity 400ms ease; }
         @media (hover: hover) {
           header nav ul li:hover {
@@ -74,7 +83,9 @@ header {
         header nav ul {
           background-color: white;
           border-radius: 0.5rem;
-          flex-direction: column;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+                  flex-direction: column;
           position: absolute;
           top: 5.5rem;
           left: 1.5rem;
@@ -87,10 +98,12 @@ header {
             header nav ul li:hover::after {
               opacity: 0; } }
   header a.header-cta {
+    background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
     background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
     border-radius: 99rem;
     color: white;
     padding: 0.5rem 1rem;
+    -webkit-transition: all 200ms ease;
     transition: all 200ms ease; }
     @media (hover: hover) {
       header a.header-cta:hover {
@@ -119,6 +132,7 @@ header {
         display: inherit; } }
 
 .overlay {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(180deg, #2d314d 0%, rgba(0, 0, 0, 0) 100%);
   position: fixed;
   height: 100vh;
@@ -128,10 +142,14 @@ header {
   z-index: 98; }
 
 .hero {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  height: calc(100vh - 2rem);
   padding: 1rem;
   background-repeat: no-repeat;
   background-position: top;
