@@ -199,7 +199,7 @@ header {
   .hero-section .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 4rem 0 2.5rem 0;
+    padding: 9.56rem 0 9.38rem 0;
     margin: 1.5rem;
     position: relative;
     width: 100%; }
@@ -261,7 +261,7 @@ header {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 42.56rem;
-    margin: -14.5rem -1.5rem -19rem 5.5rem; }
+    margin: -12.9rem -1.5rem -19rem 5.5rem; }
     @media (max-width: 768px) {
       .hero-section .right {
         background-position: 50% 0;
