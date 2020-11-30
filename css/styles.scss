@@ -31,11 +31,14 @@ body {
 a.btn {
   background: linear-gradient(90deg, $color-primary 0%, $color-secondary 100%);
   border-radius: 99rem;
-  color: $color-neutral;
-  font-size: 0.8rem;
-  text-decoration: none;
+  padding: 0.78rem 1.78rem;
 
-  padding: 1rem 3rem;
+  color: $color-neutral;
+  font-size: 0.83rem;
+  font-weight: 400;
+  letter-spacing: -0.013rem;
+  line-height: 0.94rem;
+  text-decoration: none;
 
   transition: all 200ms ease;
 
@@ -58,23 +61,33 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4rem;
+    // height: 4rem;
+    padding: 1.13rem 0;
     margin: 0 auto;
     max-width: 960px;
   }
 
   a.logo-img {
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 1.11rem;
+    width: 7.72rem;
     line-height: 0;
+    font-size: 0;
   }
 
   a {
-    color: $color-neutral-dark;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.81rem;
+    font-weight: 300;
+    letter-spacing: -0.02rem;
 
     @media (max-width: $breakpoint--tablet) {
       color: $color-background;
-      font-size: 1.1rem;
+      font-size: 1.03rem;
+      font-weight: 400;
+      letter-spacing: -0.02rem;
     }
   }
 
@@ -102,22 +115,28 @@ header {
         margin: 0 0.5rem;
         position: relative;
 
-        transition: opacity 200ms ease;
+        a {
+          color: $color-neutral-dark;
+
+          transition: all 200ms ease;
+        }
 
         &::after {
           content:"";
           height: 0.15rem;
           width: 100%;
-          bottom: 0;
-          position: absolute;background: linear-gradient(90deg, $color-primary 0%, $color-secondary 100%);
+          bottom: -1.74rem;
+          position: absolute;
+          background: linear-gradient(90deg, $color-primary 0%, $color-secondary 100%);
           opacity: 0;
 
-          transition: opacity 400ms ease;
+          transition: all 400ms ease;
         }
 
         @media (hover:hover) {
           &:hover {
             cursor: pointer;
+
             a {
               color: $color-background;
             }
@@ -136,18 +155,18 @@ header {
       ul {
         background-color: $color-neutral;
 
-        border-radius: 0.5rem;
+        border-radius: 0.22rem;
         flex-direction: column;
         position: absolute;
-        top: 5.5rem;
-        left: 1.5rem;
+        top: 4.89rem;
+        left: 1.335rem;
         padding: 1rem 0;
         height: auto;
-        width: calc(100vw - 3rem);
+        width: calc(100vw - 2.67rem);
         z-index: 99;
 
         li {
-          margin: 0.5rem auto;
+          margin: 0.67rem auto;
 
           &:hover {
             &::after {opacity: 0;}
@@ -158,6 +177,8 @@ header {
   }
 
   a.header-cta {
+    margin: -0.13rem 0;
+
     @media (max-width: $breakpoint--tablet) {
       display: none;
 
@@ -255,30 +276,37 @@ header {
   }
 
   h1 {
+    line-height: 3.5rem;
+    font-size: 3.17rem;
     font-weight: 300;
-    font-size: 2.5rem;
-    line-height: 3rem;
+    letter-spacing: -0.09rem;
 
     margin: 0.5rem 0;
-    max-width: 21.5rem;
+    max-width: 24.75rem;
 
     @media (max-width: $breakpoint--tablet) {
-      font-size: 2rem;
-      line-height: 2.66rem;
+      line-height: 2.67rem;
+      font-size: 2.28rem;
+      font-weight: 300;
+      letter-spacing: -0.02rem;
     }
   }
 
   p {
     color: $color-neutral-dark;
-    font-size: 0.85rem;
-    line-height: 1.4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
+    line-height: 1.56rem;
 
     margin: 0.5rem 0;
-    max-width: 21.5rem;
+    max-width: 24.75rem;
 
     @media (max-width: $breakpoint--tablet) {
-      font-size: 1.2rem;
-      line-height: 2rem;
+      font-size: 0.83rem;
+      font-weight: 400;
+      letter-spacing: -0.02rem;
+      line-height: 1.38rem;
     }
   }
 
@@ -290,6 +318,22 @@ header {
 .feature-section {
   background-color: $color-dark-gray;
   margin: 0;
+
+  text-align: center;
+
+  .wrapper {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.75px;
+  }
+
+  h2 {
+    font-weight: 300;
+  }
 }
 
 .hide {
