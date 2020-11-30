@@ -4,8 +4,9 @@ $color-primary: hsl(136, 65%, 51%);
 $color-secondary: hsl(192, 70%, 51%);
 $color-background: hsl(233, 26%, 24%);
 $color-neutral: hsl(0, 0%, 100%);
-$color-neutral-gray: hsl(0, 0%, 98%);
-$color-neutral-dark: hsl(233, 8%, 62%);
+$color-lite-gray: hsla(0, 0%, 98%, 1.00);
+$color-dark-gray: hsla(220, 16%, 96%, 1.00);
+$color-neutral-dark: hsla(255, 2%, 67%, 1.00);
 
 $breakpoint--mobile-l: 425px;
 $breakpoint--tablet: 768px;
@@ -20,6 +21,9 @@ html {
 
 body {
   font-family: 'Public Sans', sans-serif;
+
+  display: flex;
+  flex-flow: column nowrap;
   margin: 0;
   padding: 0;
 }
@@ -31,7 +35,7 @@ a.btn {
   font-size: 0.8rem;
   text-decoration: none;
 
-  padding: 0.5rem 1rem;
+  padding: 1rem 3rem;
 
   transition: all 200ms ease;
 
@@ -43,6 +47,7 @@ a.btn {
 }
 
 header {
+  padding: 0 1.25rem;
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -56,7 +61,6 @@ header {
     height: 4rem;
     margin: 0 auto;
     max-width: 960px;
-    padding: 0 1.25rem;
   }
 
   a.logo-img {
@@ -206,34 +210,62 @@ header {
 
 .hero-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  // height: calc(100vh - 2rem);
-  padding: 100vw 1rem 2.5rem 1rem;
+  justify-content: flex-start;
+  padding: 4rem 1rem 2.5rem 1rem;
+  max-height: 50rem;
+  min-height: 35rem;
+  margin: 0;
 
-  // background: url(../img/bg-intro-desktop.svg);
+  background: url(../img/image-mockups.png), url(../img/bg-intro-desktop.svg);
+  background-color: $color-lite-gray;
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  background-color: $color-neutral;
+  background-position: 100% 20%, 150% 53%;
+  background-size: 45vw, 70vw;
 
   color: $color-background;
-  text-align: center;
+  text-align: left;
 
-  @media (max-width: $breakpoint--mobile-l) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+  }
+
+  @media (max-width: $breakpoint--tablet) {
     background: url(../img/image-mockups.png), url(../img/bg-intro-mobile.svg);
+    background-color: $color-lite-gray;
     background-repeat: no-repeat;
     background-position: center -3rem, 0 0;
     background-size: calc(100% - 2rem), 100%;
+
+    min-height: 0;
+    padding-top: 100vw;
+
+    text-align: center;
+
+    .wrapper {
+      align-items: center;
+      justify-content: flex-end;
+    }
   }
 
   h1 {
     font-weight: 300;
-    font-size: 2rem;
-    line-height: 2.66rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
 
     margin: 0.5rem 0;
+    max-width: 21.5rem;
+
+    @media (max-width: $breakpoint--tablet) {
+      font-size: 2rem;
+      line-height: 2.66rem;
+    }
   }
 
   p {
@@ -242,15 +274,22 @@ header {
     line-height: 1.4rem;
 
     margin: 0.5rem 0;
+    max-width: 21.5rem;
+
+    @media (max-width: $breakpoint--tablet) {
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
   }
 
   a {
-    margin: 1rem auto;
+    margin: 1rem 0;
   }
 }
 
 .feature-section {
-  background-color: $color-neutral-gray;
+  background-color: $color-dark-gray;
+  margin: 0;
 }
 
 .hide {
