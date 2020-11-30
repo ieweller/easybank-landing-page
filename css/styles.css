@@ -128,6 +128,8 @@ header {
           z-index: 99; }
           header nav ul li {
             margin: 0.67rem auto; }
+            header nav ul li a {
+              color: #2d314d; }
             header nav ul li:hover::after {
               opacity: 0; } }
   header a.header-cta {
