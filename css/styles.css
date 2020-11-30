@@ -176,18 +176,38 @@ header {
           align-items: center;
   -webkit-box-pack: start;
           justify-content: flex-start;
-  padding: 4rem 1rem 2.5rem 1rem;
+  padding: 0;
   max-height: 50rem;
   min-height: 35rem;
   margin: 0;
-  background: url(../img/image-mockups.png), url(../img/bg-intro-desktop.svg);
+  background: url(../img/bg-intro-desktop.svg);
   background-color: #fafafa;
   background-repeat: no-repeat;
-  background-position: 100% 20%, 150% 53%;
-  background-size: 45vw, 70vw;
+  background-position: 50vw -9.83rem;
+  background-size: 66.1rem;
   color: #2d314d;
   text-align: left; }
+  @media (max-width: 768px) {
+    .hero-section {
+      background: url(../img/bg-intro-mobile.svg);
+      background-color: #fafafa;
+      background-repeat: no-repeat;
+      background-position: -3.28rem -2.83rem;
+      background-size: 47.61rem;
+      min-height: 0;
+      text-align: center; } }
   .hero-section .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 0 2.5rem 0;
+    margin: 1.5rem;
+    position: relative;
+    width: 100%; }
+    @media (max-width: 768px) {
+      .hero-section .wrapper {
+        grid-template-columns: auto;
+        grid-template-rows: 15.61rem auto; } }
+  .hero-section .left {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -195,60 +215,63 @@ header {
             flex-direction: column;
     -webkit-box-align: start;
             align-items: flex-start;
+    grid-area: 1 / 1 / 2 / 2;
     -webkit-box-pack: center;
             justify-content: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 960px; }
-  @media (max-width: 768px) {
-    .hero-section {
-      background: url(../img/image-mockups.png), url(../img/bg-intro-mobile.svg);
-      background-color: #fafafa;
-      background-repeat: no-repeat;
-      background-position: center -3rem, 0 0;
-      background-size: calc(100% - 2rem), 100%;
-      min-height: 0;
-      padding-top: 100vw;
-      text-align: center; }
-      .hero-section .wrapper {
+    margin: 0 0 0 auto;
+    padding: 0;
+    max-width: 480px; }
+    @media (max-width: 768px) {
+      .hero-section .left {
         -webkit-box-align: center;
                 align-items: center;
+        grid-area: 2 / 1 / 3 / 2;
         -webkit-box-pack: end;
-                justify-content: flex-end; } }
-  .hero-section h1 {
-    line-height: 3.5rem;
-    font-size: 3.17rem;
-    font-weight: 300;
-    letter-spacing: -0.09rem;
-    margin: 0.5rem 0;
-    max-width: 24.75rem; }
+                justify-content: flex-end;
+        margin: 0 auto; } }
+    .hero-section .left h1 {
+      line-height: 3.5rem;
+      font-size: 3.17rem;
+      font-weight: 300;
+      letter-spacing: -0.09rem;
+      margin: 0.5rem 0; }
+      @media (max-width: 768px) {
+        .hero-section .left h1 {
+          line-height: 2.67rem;
+          font-size: 2.28rem;
+          font-weight: 300;
+          letter-spacing: -0.02rem; } }
+    .hero-section .left p {
+      color: #aaa9ad;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: -0.02rem;
+      line-height: 1.56rem;
+      margin: 0.5rem 0; }
+      @media (max-width: 768px) {
+        .hero-section .left p {
+          font-size: 0.83rem;
+          font-weight: 400;
+          letter-spacing: -0.02rem;
+          line-height: 1.38rem; } }
+    .hero-section .left a {
+      margin: 1rem 0; }
+  .hero-section .right {
+    background: url(../img/image-mockups.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 42.56rem;
+    margin: -14.5rem -1.5rem -19rem 5.5rem; }
     @media (max-width: 768px) {
-      .hero-section h1 {
-        line-height: 2.67rem;
-        font-size: 2.28rem;
-        font-weight: 300;
-        letter-spacing: -0.02rem; } }
-  .hero-section p {
-    color: #aaa9ad;
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: -0.02rem;
-    line-height: 1.56rem;
-    margin: 0.5rem 0;
-    max-width: 24.75rem; }
-    @media (max-width: 768px) {
-      .hero-section p {
-        font-size: 0.83rem;
-        font-weight: 400;
-        letter-spacing: -0.02rem;
-        line-height: 1.38rem; } }
-  .hero-section a {
-    margin: 1rem 0; }
+      .hero-section .right {
+        background-position: 50% 0;
+        background-size: 19rem;
+        margin: -8.5rem -1.5rem 0 -1.5rem; } }
 
 .feature-section {
   background-color: #f3f4f6;
   margin: 0;
-  text-align: center; }
+  text-align: left; }
   .feature-section .wrapper {
     padding: 0 1rem; }
   .feature-section h1 {
