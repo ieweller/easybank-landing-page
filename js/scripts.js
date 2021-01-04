@@ -24,15 +24,15 @@ function latestArticles(articlesList) {
 
   $.each(articlesList, function(index, val){
 
-    buffer += '<article><img src="';
+    buffer += '<article><div class="thumbnail" style="background-image: url(';
     buffer += val.thumbnail;
-    buffer += '"><span rel="author">By ';
+    buffer += ')"></div><div class="details"><span rel="author">By ';
     buffer += val.author;
-    buffer += '</span><h1>';
+    buffer += '</span><a href="#"><h1>';
     buffer += val.title;
-    buffer += '</h1><p>';
+    buffer += '</h1></a><p>';
     buffer += val.content;
-    buffer += '</p></article>';
+    buffer += '</p></div></article>';
   });
   // Adds table generated from JSON objects to DOM
   $('.latest-articles').html(buffer);
