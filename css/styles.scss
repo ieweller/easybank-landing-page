@@ -284,6 +284,8 @@ header {
     @media (max-width: $breakpoint--tablet) {
       grid-template-columns: auto;
       grid-template-rows: 15.61rem auto;
+
+      padding: 9.56rem $border-width 4.78rem $border-width;
     }
   }
 

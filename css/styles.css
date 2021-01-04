@@ -187,7 +187,8 @@ header {
     @media (max-width: 768px) {
       .hero-section .wrapper {
         grid-template-columns: auto;
-        grid-template-rows: 15.61rem auto; } }
+        grid-template-rows: 15.61rem auto;
+        padding: 9.56rem 24px 4.78rem 24px; } }
   .hero-section .left {
     display: flex;
     flex-direction: column;
