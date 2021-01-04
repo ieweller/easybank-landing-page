@@ -29,6 +29,12 @@ body {
   flex-flow: column nowrap;
   margin: 0;
   padding: 0;
+
+  overflow-x: hidden;
+
+  &.hide-overflow {
+    overflow: hidden;
+  }
 }
 
 a.btn {
