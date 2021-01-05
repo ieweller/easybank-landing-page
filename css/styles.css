@@ -2,16 +2,16 @@
 * {
   box-sizing: border-box; }
 
-html {
-  font-size: 18px; }
+html, body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+  overflow-x: hidden; }
 
 body {
-  font-family: 'Public Sans', sans-serif;
   display: flex;
   flex-flow: column nowrap;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden; }
+  padding: 0; }
   body.hide-overflow {
     overflow: hidden; }
 
@@ -203,15 +203,15 @@ header {
     grid-area: 1 / 1 / 2 / 2;
     justify-content: center;
     margin: 0 0 0 auto;
-    padding: 0;
-    padding-left: 24px;
+    padding: 0 0 0 24px;
     max-width: calc(1108px / 2); }
     @media (max-width: 768px) {
       .hero-section .left {
         align-items: center;
         grid-area: 2 / 1 / 3 / 2;
         justify-content: flex-end;
-        margin: 0 auto; } }
+        margin: 0 auto;
+        padding: 0; } }
     .hero-section .left h1 {
       line-height: 3.5rem;
       font-size: 3.17rem;
@@ -359,7 +359,7 @@ header {
           letter-spacing: -0.011rem; }
         .articles-section .latest-articles article .details a {
           text-decoration: none; }
-        .articles-section .latest-articles article .details h1 {
+        .articles-section .latest-articles article .details h2 {
           color: #2d314d;
           font-size: 0.889rem;
           font-weight: 300;
@@ -367,7 +367,7 @@ header {
           margin: 0.444rem 0;
           transition: all 0.2s ease-in-out; }
           @media (hover: hover) {
-            .articles-section .latest-articles article .details h1:hover {
+            .articles-section .latest-articles article .details h2:hover {
               color: #31d35c; } }
         .articles-section .latest-articles article .details p {
           color: #aaa9ad;

@@ -28,9 +28,9 @@ function latestArticles(articlesList) {
     buffer += val.thumbnail;
     buffer += ')"></div><div class="details"><span rel="author">By ';
     buffer += val.author;
-    buffer += '</span><a href="#"><h1>';
+    buffer += '</span><a href="#"><h2>';
     buffer += val.title;
-    buffer += '</h1></a><p>';
+    buffer += '</h2></a><p>';
     buffer += val.content;
     buffer += '</p></div></article>';
   });
