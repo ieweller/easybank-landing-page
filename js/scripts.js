@@ -1,9 +1,13 @@
 // toggle mobile menu when hamburger/close icon is touched
-$(".menu").click(function(){
+$(".menu, .overlay").click(function(){
   $("nav").fadeToggle(50);
   $(".overlay").fadeToggle(200);
   $(".menu").toggleClass('close');
   $("body").toggleClass('hide-overflow');
+});
+
+$('.overlay').click(function() {
+  //Hide the menus if visible
 });
 
 $(function() {
