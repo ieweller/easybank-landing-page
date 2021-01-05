@@ -27,11 +27,13 @@ a.btn {
   font-weight: 400;
   letter-spacing: -0.013rem;
   line-height: 0.94rem;
+  text-align: center;
   text-decoration: none;
-  transition: all 0.2s ease-in-out; }
+  transition: all 200ms ease-in-out; }
   @media (hover: hover) {
     a.btn:hover {
-      opacity: 0.7; } }
+      -webkit-filter: brightness(1.15) saturate(85%);
+              filter: brightness(1.15) saturate(85%); } }
 .logo-img {
   top: 0;
   left: 0;
@@ -477,9 +479,6 @@ footer {
         align-items: center; } }
     footer .col3 small {
       margin: 1.556rem 0; }
-    footer .col3 .btn {
-      display: block;
-      text-align: center; }
 
 .hide {
   display: none; }
