@@ -8,6 +8,8 @@ $color-lite-gray: hsla(0, 0%, 98%, 1.00);
 $color-dark-gray: hsla(220, 16%, 96%, 1.00);
 $color-neutral-dark: hsla(255, 2%, 67%, 1.00);
 
+$color-gradient-default: linear-gradient(90deg, $color-primary 0%, $color-secondary 100%);
+
 $breakpoint--mobile-l: 425px;
 $breakpoint--tablet: 768px;
 
@@ -38,9 +40,12 @@ body {
 }
 
 a.btn {
-  background: linear-gradient(90deg, $color-primary 0%, $color-secondary 100%);
+  background-color: $color-neutral;
+  background-image: $color-gradient-default;
   border-radius: 99rem;
+  display: block;
   padding: 0.78rem 1.78rem;
+  position: relative;
 
   color: $color-neutral;
   font-size: 0.83rem;
@@ -49,13 +54,25 @@ a.btn {
   line-height: 0.94rem;
   text-decoration: none;
 
-  transition: all 200ms ease;
+  transition: all 0.2s ease-in-out;
 
   @media (hover:hover) {
     &:hover {
-      opacity: 0.75;
+      opacity: 0.7;
     }
   }
+
+}
+
+.logo-img {
+  top: 0;
+  left: 0;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 1.11rem;
+  width: 7.72rem;
+  font-size: 0;
 }
 
 header {
@@ -76,15 +93,15 @@ header {
     max-width: $max-width;
   }
 
-  a.logo-img {
-    background-image: url(../img/logo.svg);
-    background-repeat: no-repeat;
-    background-position: left center;
-    height: 1.11rem;
-    width: 7.72rem;
-    line-height: 0;
-    font-size: 0;
-  }
+  // a.logo-img {
+  //   background-image: url(../img/logo.svg);
+  //   background-repeat: no-repeat;
+  //   background-position: left center;
+  //   height: 1.11rem;
+  //   width: 7.72rem;
+  //   line-height: 0;
+  //   font-size: 0;
+  // }
 
   a {
     text-decoration: none;
@@ -538,8 +555,10 @@ header {
 
           transition: all 0.2s ease-in-out;
 
-          &:hover {
-            color: $color-primary;
+          @media (hover:hover) {
+            &:hover {
+              color: $color-primary;
+            }
           }
         }
 
@@ -564,11 +583,150 @@ header {
 
 footer {
   background-color: $color-background;
+  width: 100%;
 
   .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
     max-width: $max-width;
     margin: 0 auto;
-    padding: 0 $border-width;
+    padding: 2.667rem $border-width;
+
+    @media (max-width: $breakpoint--tablet) {
+      grid-template-columns: auto;
+    }
+  }
+
+  ul {
+    color: $color-neutral;
+    list-style: none;
+  }
+
+  small {
+    color: $color-neutral-dark;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+      font-size: 0;
+    }
+
+    .social-link {
+      mask-position: center center;
+      mask-repeat: no-repeat;
+
+      background-color: white;
+
+      margin: 0 0.24rem;
+      height: 1.111rem;
+      width: 1.111rem;
+
+      transition: all 200ms ease-in-out;
+
+      @media (max-width: $breakpoint--tablet) {
+        margin: 0 0.5rem;
+        height: 1.389rem;
+        width: 1.389rem;
+      }
+
+      @media (hover:hover) {
+        &:hover {
+          background-color: $color-primary;
+        }
+      }
+
+      &#icon-facebook {
+        mask-image: url(../img/icon-facebook.svg);
+      }
+      &#icon-youtube {
+        mask-image: url(../img/icon-youtube.svg);
+      }
+      &#icon-twitter {
+        mask-image: url(../img/icon-twitter.svg);
+      }
+      &#icon-pinterest {
+        mask-image: url(../img/icon-pinterest.svg);
+      }
+      &#icon-instagram {
+        mask-image: url(../img/icon-instagram.svg);
+      }
+    }
+  }
+
+  .col1 {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    @media (max-width: $breakpoint--tablet) {
+      align-items: center;
+      margin-bottom: 1.944rem;
+    }
+
+    .logo-img {
+      background-image: url(../img/logo-lite.svg);
+      margin-bottom: 3.056rem;
+    }
+
+  }
+
+  .col2 {
+
+    ul {
+      columns: 2;
+      margin: 0;
+      padding: 0;
+      width: 66%;
+
+      @media (max-width: $breakpoint--tablet) {
+        columns: 1;
+        text-align: center;
+
+        margin-bottom: 1.944rem;
+        width: 100%;
+      }
+
+      li {
+        margin-bottom: 0.87rem;
+
+        a {
+          color: $color-neutral;
+          text-decoration: none;
+
+          transition: all 0.2s ease-in-out;
+
+          @media (hover:hover) {
+            &:hover {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .col3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width: $breakpoint--tablet) {
+      align-items: center;
+    }
+
+    small {
+      margin: 1.556rem 0;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+    }
   }
 }
 
