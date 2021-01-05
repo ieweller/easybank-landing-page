@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0; }
   body.hide-overflow {
-    overflow-y: hidden; }
+    overflow: hidden; }
 
 a.btn {
   background-color: white;
@@ -421,18 +421,23 @@ footer {
         footer .social-icons .social-link:hover {
           background-color: #31d35c; } }
       footer .social-icons #icon-facebook.social-link {
+        -webkit-mask-box-image: url(../img/icon-facebook.svg);
         -webkit-mask-image: url(../img/icon-facebook.svg);
                 mask-image: url(../img/icon-facebook.svg); }
       footer .social-icons #icon-youtube.social-link {
+        -webkit-mask-box-image: url(../img/icon-youtube.svg);
         -webkit-mask-image: url(../img/icon-youtube.svg);
                 mask-image: url(../img/icon-youtube.svg); }
       footer .social-icons #icon-twitter.social-link {
+        -webkit-mask-box-image: url(../img/icon-twitter.svg);
         -webkit-mask-image: url(../img/icon-twitter.svg);
                 mask-image: url(../img/icon-twitter.svg); }
       footer .social-icons #icon-pinterest.social-link {
+        -webkit-mask-box-image: url(../img/icon-pinterest.svg);
         -webkit-mask-image: url(../img/icon-pinterest.svg);
                 mask-image: url(../img/icon-pinterest.svg); }
       footer .social-icons #icon-instagram.social-link {
+        -webkit-mask-box-image: url(../img/icon-instagram.svg);
         -webkit-mask-image: url(../img/icon-instagram.svg);
                 mask-image: url(../img/icon-instagram.svg); }
   footer .col1 {
